@@ -179,19 +179,36 @@ namespace Algorithm.Tests
         }
 
         [TestMethod()]
-        public void RedixSortTest()
+        public void LsdRedixSortTest()
         {
             //arrage
-            var redix = new RedixSort<int>();
-            redix.Items.AddRange(Items);
+            var lsdRedix = new LsdRedixSort<int>();
+            lsdRedix.Items.AddRange(Items);
 
             //act
-            redix.Sort();
+            lsdRedix.Sort();
 
             //assert
             for (int i = 0; i < Items.Count; i++)
             {
-                Assert.AreEqual(Sorted[i], redix.Items[i]);
+                Assert.AreEqual(Sorted[i], lsdRedix.Items[i]);
+            }
+        }
+
+        [TestMethod()]
+        public void MsdRedixSortTest()
+        {
+            //arrage
+            var msdRedix = new MsdRedixSort<int>();
+            msdRedix.Items.AddRange(Items);
+
+            //act
+            msdRedix.Sort();
+
+            //assert
+            for (int i = 0; i < Items.Count; i++)
+            {
+                Assert.AreEqual(Sorted[i], msdRedix.Items[i]);
             }
         }
     }
