@@ -375,7 +375,7 @@ namespace SortAlgorithms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form2";
+            this.Text = "Алгоритмы сортировки";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

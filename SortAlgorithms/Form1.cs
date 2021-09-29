@@ -28,6 +28,8 @@ namespace SortAlgorithms
 
         private void FillButton_Click(object sender, EventArgs e)
         {
+            items.Clear();
+
             if (int.TryParse(FillTextBox.Text, out int value))
             {
                 unsortedTexBox.Text = "";
